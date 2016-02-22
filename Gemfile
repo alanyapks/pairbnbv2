@@ -32,6 +32,10 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Figaro gem for securely configure app
 gem "figaro"
 
+gem 'omniauth'
+# Use Omniauth-facebook gem to user access through faecbook
+gem 'omniauth-facebook'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
