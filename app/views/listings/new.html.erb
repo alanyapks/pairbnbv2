@@ -1,0 +1,42 @@
+<h1>Create new listing</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @listing do |f| %> 
+    	<hr>
+    	<h3>Tell travelers about your space</h3>
+    	<p>Every space on Pairbnb is unique. Highlight what makes your listing welcoming so that it stands out to guests who want to stay in your area.</p>
+    	<br/>
+      <%= f.label :name, 'Listing Name' %>
+      <%= f.text_field :name, class: 'form-control', placeholder: 'Be clear and descriptive.' %>
+      <br/>
+      <%= f.label :description %>
+      <%= f.text_area(:description, :size => "50x10", class: 'form-control', placeholder: 'Tell the travelers what you love about the space. You can include details about the decor, the amenities it includes, and the neighborhood.') %>
+
+      <hr>
+      <%= f.label :country %>
+      <%= f.select :country, class: 'form-control' %>
+      <br/>
+      <%= f.label :address, 'Street Address' %>
+      <%= f.text_field :address, class: 'form-control', placeholder: 'House name/number + street/road' %>
+      <br/>
+      <div class ="row">
+	      <div class="row-space-1 col-sm-6">
+		      <%= f.label :city, 'City' %>
+		      <%= f.text_field :city, class: 'form-control' %>
+		    </div>
+		    <div class="row-space-1 col-sm-6">
+		      <%= f.label :state, 'State' %>
+		      <%= f.text_field :state, class: 'form-control' %>
+		    </div>
+      </div>
+      <br/>
+      <div class ="row">
+	      <div class="row-space-1 col-sm-6">
+		      <%= f.label :zip_code, 'ZIP Code' %>
+		      <%= f.text_field :zip_code, class: 'form-control' %>
+		    </div>
+      </div>
+      <br/>
+    <% end %>
+  </div>
+</div>
