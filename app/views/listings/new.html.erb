@@ -3,6 +3,10 @@
   <div class="col-md-6 col-md-offset-3">
     <%= form_for @listing do |f| %> 
     	<hr>
+    	<h3>Help travelers to find the right fit</h3>
+    	<p>Every space on Pairbnb is unique. Highlight what makes your listing welcoming so that it stands out to guests who want to stay in your area.</p>
+    	<br/>
+    	<hr>
     	<h3>Tell travelers about your space</h3>
     	<p>Every space on Pairbnb is unique. Highlight what makes your listing welcoming so that it stands out to guests who want to stay in your area.</p>
     	<br/>
@@ -13,9 +17,11 @@
       <%= f.text_area(:description, :size => "50x10", class: 'form-control', placeholder: 'Tell the travelers what you love about the space. You can include details about the decor, the amenities it includes, and the neighborhood.') %>
 
       <hr>
+      <h3>Help guests find your place</h3>
+    	<p>Travelers will use this infomation to find a place that's in the right spot.</p>
       <%= f.label :country %>
-      <%= f.select :country, class: 'form-control' %>
-      <br/>
+      <%= f.country_select :country, class: 'form-control' %>
+      <br/><br/>
       <%= f.label :address, 'Street Address' %>
       <%= f.text_field :address, class: 'form-control', placeholder: 'House name/number + street/road' %>
       <br/>
