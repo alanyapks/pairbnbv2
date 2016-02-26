@@ -7,7 +7,7 @@
 			<div class="col-lg-8">
 				<div class="col-md-3">
 					<div class="host-profile-pic">Profile pic</div>
-					<div><p><%= current_user.email %></p></div>
+					<div><p><%= @listing.user.email %></p></div>
 				</div>
 				<div class="col-md-9">
 					<h4><%= @listing.name %></h4>
@@ -80,8 +80,8 @@
 					<div class="host-profile-pic">Profile pic</div>
 				</div>
 				<div class="col-md-9">
-					<p>Member since <%= current_user.created_at %></p>
-					<p><%= current_user.email %></p>
+					<p>Member since <%= @listing.user.created_at %></p>
+					<p><%= @listing.user.email %></p>
 					<div class="btn btn-primary">Contact Host</div>
 				</div>
 			</div>
