@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   include Clearance::User
 
    has_many :authentications, :dependent => :destroy
+   has_many :listings, :dependent => :destroy
+
 
   def self.create_with_auth_and_hash(authentication,auth_hash)
     create! do |u|
@@ -19,5 +21,6 @@ class User < ActiveRecord::Base
   def password_optional?
     true
   end
+
   
 end
