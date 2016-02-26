@@ -5,6 +5,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5.1'
 # Using Bootsrap to fill layout
 gem 'bootstrap-sass'
+# Search function using elastic search gem
+gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
+gem 'elasticsearch-rails', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
 # Country select
 gem 'country_select'
 # Use postgresql as the database for Active Record

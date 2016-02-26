@@ -1,4 +1,6 @@
 class Listing < ActiveRecord::Base
+	include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
 	belongs_to :user 
 
 	# Assuming country_select is used with User attribute `country_code`
