@@ -9,13 +9,15 @@ class ListingsController < ApplicationController
   def create
     @listing = current_user.listings.build(listing_params)
     if @listing.save
-      flash[:success] = "Created new listing"     
+      flash[:success] = "Created new listing"
+      redirect_to @listing     
     else
       render 'new'
     end
   end
 
   def show
+    @listing = current_user.listings.find(params[:id])
   end
 
   def edit

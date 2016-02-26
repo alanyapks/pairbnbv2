@@ -17,6 +17,7 @@ textarea {
   resize: vertical;
 }
 
+
 .center {
   text-align: center;
   h1 {
@@ -93,4 +94,34 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+/* Listings */
+.listings {
+  h1, h4, h5{
+    font-weight: 800;
+  }
+
+  a {
+    color: #3FB8AF;
+    font-weight: 900;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+}
+
+.listing-cover-photo{
+  background: #777777;
+  width: 100%;
+  height: 400px;
+}
+
+.host-profile-pic{
+    width: 90px;
+    height: 90px;
+    background-color: #777777;
+    margin: 0 0 5% 0;
 }
