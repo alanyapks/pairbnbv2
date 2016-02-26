@@ -1,3 +1,30 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profile{
+	h1 {
+		font-size: 44px;
+	  font-weight: normal;
+	  text-align: left;
+	}
+}
+
+.profile-pic{
+	height: 230px;
+	width: 230px;
+	background:#a7a7a7;
+}
+
+.panel{
+	margin-bottom: 25px;
+	margin-top:25px;
+
+	.panel-header{
+		color: #565a5c;
+    font-size: 16px;
+    padding: 12px 12px 12px 0;
+    border-bottom: 1px solid #dce0e0;
+    background-color: #edefed;
+	}
+}
