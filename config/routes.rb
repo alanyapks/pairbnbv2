@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'users#index'
 
+  get "/listings" => "listings#index"
+
 
   # Facebook access 
   get "/auth/:provider/callback" => "sessions#create_from_omniauth"

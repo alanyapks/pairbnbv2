@@ -24,4 +24,5 @@ index- specify which page have that specific keywords
 
 -------------------------------------------
 
-Product.clean_indices
+Step 3
+http://blog.ragnarson.com/2013/10/10/adding-search-and-autocomplete-to-a-rails-app-with-elasticsearch.html
