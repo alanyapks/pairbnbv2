@@ -1,4 +1,5 @@
 class Listing < ActiveRecord::Base
+	searchkick
 	belongs_to :user 
 
 	# Assuming country_select is used with User attribute `country_code`
