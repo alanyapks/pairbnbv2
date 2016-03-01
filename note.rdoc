@@ -1,0 +1,28 @@
+///// Install searchkick gem in ubuntu /////////
+
+Step 1 : Go to root file
+
+wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.1.0.deb
+
+sudo dpkg -i elasticsearch-1.1.0.deb
+
+------------------------------------------
+
+Possible step: Install Java
+https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get
+
+* Dont need jdk as we are using ruby
+
+------------------------------------------
+
+Step 2: To start 
+sudo service elasticsearch start
+
+run rails console 
+type Product.reindex (generate index table)
+index- specify which page have that specific keywords
+
+-------------------------------------------
+
+Step 3
+http://blog.ragnarson.com/2013/10/10/adding-search-and-autocomplete-to-a-rails-app-with-elasticsearch.html

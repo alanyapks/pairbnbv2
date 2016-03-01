@@ -1,5 +1,10 @@
 class ListingsController < ApplicationController
   def index
+    if params[:query].present?
+      @listings = Listing.search(params[:query], page:params[:page])
+    else
+      @listings = Listing.all.page params[:page]      
+    end
   end
 
   def new
