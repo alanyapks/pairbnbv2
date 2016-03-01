@@ -1,8 +1,9 @@
 class User < ActiveRecord::Base
   include Clearance::User
-
-   has_many :authentications, :dependent => :destroy
-   has_many :listings, :dependent => :destroy
+    # attr_accessible :user_id, :name, :image
+    has_many :authentications, :dependent => :destroy
+    has_many :listings, :dependent => :destroy
+    mount_uploader :images, AvatarUploader
 
 
   def self.create_with_auth_and_hash(authentication,auth_hash)
