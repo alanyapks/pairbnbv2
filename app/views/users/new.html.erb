@@ -4,6 +4,13 @@
   <%= form_for @user do |form| %>
     <%= render partial: '/users/form', object: form %>
 
+    <hr>
+    <div>
+      <%= form.label :image, "Upload your profile image" %>
+      <%= form.file_field :image %>
+    </div>
+    <hr>
+
     <div class="submit-field">
       <%= form.submit %>
     </div>

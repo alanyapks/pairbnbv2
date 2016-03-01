@@ -30,3 +30,15 @@ http://blog.ragnarson.com/2013/10/10/adding-search-and-autocomplete-to-a-rails-a
 _______________________________________________
 
 
+Change data type:
+Way 1:
+
+class ChangeImageToImages < ActiveRecord::Migration
+  def change
+  	remove_column :users, :image, :string
+  	add_column :users, :images, :json
+  end
+end
+
+
+_______________________________________________
