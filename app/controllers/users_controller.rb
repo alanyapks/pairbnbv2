@@ -14,7 +14,6 @@ class UsersController < Clearance::UsersController
   	@user.image = params[:file]
     # @user.update(params [:image])
   	if @user.save
-      flash[:success] = "Created new user"
   		sign_in @user
     else
       render 'new'
