@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
   include Clearance::User
-    # attr_accessible :user_id, :name, :images
     has_many :authentications, :dependent => :destroy
     has_many :listings, :dependent => :destroy
     mount_uploader :image, AvatarUploader
