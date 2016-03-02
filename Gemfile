@@ -11,6 +11,8 @@ gem 'country_select'
 gem "searchkick"
 # Use carrierwave gem to upload image
 gem 'carrierwave' 
+# Use minimagick to resize uploaded images
+gem "mini_magick"
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
