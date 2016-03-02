@@ -44,7 +44,9 @@ end
 _______________________________________________
 
 Instead of using hidden input 
+
 Use nested routes:
 <%= form_for [@user,@listing] do  %>
+
 Then in the routes file:
 Include resources :listings only: [:create]
