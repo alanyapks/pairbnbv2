@@ -1,5 +1,5 @@
 <% if signed_in? %>
-	<%= image_tag @user.image.thumb.url if @user.image.thumb%>
+	<%= image_tag @user.image.url(:thumb).to_s %>
   Signed in as: <%= current_user.email %>
   <%= button_to 'Sign out', sign_out_path, method: :delete %>
 <% else %>
