@@ -9,6 +9,8 @@ gem 'bootstrap-sass'
 gem 'country_select'
 # Use searchkick gem for search
 gem "searchkick"
+# Use carrierwave gem to upload image
+gem 'carrierwave' 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
