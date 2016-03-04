@@ -1,2 +1,16 @@
 <h1>Show listing</h1>
-<p>Find me in app/views/listings/index.html.erb</p>
+<div class="row">
+	<div class ="col-md-3 space-sm-3">
+	<button type="button" class="btn btn-secondary"><%= link_to 'Create Listing', new_listing_path %></button>
+	</div>
+	<div class="col-md-9">
+		<div>
+			<% @listings.each do |listing|%>
+				<div class="listing-tab">
+					<div><%=listing.name%></div>
+					<div><%=listing.description%></div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
