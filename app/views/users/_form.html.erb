@@ -20,7 +20,7 @@
 <br/>
 <div>
 	<%= form.label :birthday %><br/>
-	<%= form.date_select :birthday, order: [:month, :day, :year] %>
+	<%= form.date_select :birthday, order: [:month, :day, :year], prompt: { month: 'Month', day: 'Day', year: 'Year' }, start_year: 1896 %>
 </div>
 <br/>
 <small>By signing up, I agree to Pairbnb's Terms of Service, Privacy Policy, Guest Refund Policy, and Host Guarantee Terms.</small>
