@@ -11,7 +11,7 @@
 									  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									  	<div>
 									  		<%= current_user.first_name %>
-									    	<%= image_tag @user.image.url(:thumb).to_s %>
+									    	<%= image_tag current_user.image.url(:thumb).to_s %>
 									  	</div>
 									  </button>
 									  <ul class="dropdown-menu">

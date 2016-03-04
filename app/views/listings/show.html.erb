@@ -74,6 +74,13 @@
 			</div>
 		</div>
 		<hr>
+		<div>
+			<% @listing.photos.each do |photo| %>
+				<%= image_tag(photo.url.to_s) %>
+			<% end %>
+		</div>
+		<br/>
+		<hr>
 		<div class="row">
 			<div class="col-lg-8">
 				<div class="col-md-3">
