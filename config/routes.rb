@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get "/sign_up" => "clearance/users#new", as: "sign_up"
   # clearance routes end
 
-  resources :listings, only: [:new, :create, :show, :edit]
+  resources :listings, only: [:new, :create, :show, :edit, :update, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

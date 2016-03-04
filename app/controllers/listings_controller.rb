@@ -30,9 +30,19 @@ class ListingsController < ApplicationController
   end
 
   def update
+    @listing = Listing.find(params[:id])
+    if @listing.update_attributes(listing_params)
+      flash[:success] = "Listing updated"
+      redirect_to @listing
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @listing.destroy
+    flash[:sucess]="Listing deleted"
+    redirect_to '/'
   end
 
   private
