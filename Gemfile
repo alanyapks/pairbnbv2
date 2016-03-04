@@ -10,7 +10,7 @@ gem 'country_select'
 # Use searchkick gem for search
 gem "searchkick"
 # Use carrierwave gem to upload image
-gem 'carrierwave' 
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 # Resize uploaded images
 gem "mini_magick"
 gem "rmagick"
