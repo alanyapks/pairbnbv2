@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resource :session, controller: "clearance/sessions", only: [:create]
 
   # clearance routes start
-  resources :users, controller: "users", only: [:create, :show] do
+  resources :users, controller: "users", only: [:create, :show, :edit, :update] do
     resources :listings, only: [:create]
     resource :password,
       controller: "clearance/passwords",

@@ -16,7 +16,7 @@
 									  </button>
 									  <ul class="dropdown-menu">
 									    <li class="dropdown-item"><%= link_to 'Your Listing' %></li>
-									    <li class="dropdown-item"><%= link_to 'Edit Profile' %></li>
+									    <li class="dropdown-item"><%= link_to 'Edit Profile', edit_user_path(current_user) %></li>
 									    <div class="dropdown-divider"></div>
 									    <li class="dropdown-item"><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
 									  </ul>
