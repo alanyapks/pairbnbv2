@@ -1,6 +1,7 @@
 class Listing < ActiveRecord::Base
 	searchkick
 	belongs_to :user 
+	mount_uploaders :photos, AvatarUploader
 
 	# Assuming country_select is used with User attribute `country_code`
   # This will attempt to translate the country name and use the default

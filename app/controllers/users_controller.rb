@@ -10,8 +10,9 @@ class UsersController < Clearance::UsersController
   end
 
   def create
+    # byebug
   	@user = User.new user_params
-  	@user.image = params[:file]
+  	# @user.image = params[:file]
     # @user.update(params [:image])
   	if @user.save
   		sign_in @user

@@ -81,8 +81,8 @@
       <p>Add at least 1 photo of areas guests have access to. You can always come back later to add more.</p>
       <br/>
       <div>
-        <%= f.label :image, "Add photos" %>
-        <%= f.file_field :image %>
+        <%= f.label :photos, "Add photos" %>
+        <%= f.file_field :photos, multiple: true, name: "post_attachments[avatar][]" %>
       </div>
       <hr>
       <br/>
