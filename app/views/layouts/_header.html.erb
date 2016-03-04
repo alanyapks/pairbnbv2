@@ -7,7 +7,20 @@
 							<li ><%= link_to "Messages",   '#' %></li>
 							<li><%= link_to "Help",   '#' %></li>
 							<% if signed_in? %>
-								<li><%= link_to "User Profile",   '#' %></li>
+								<div class="btn-group">
+									  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									  	<div>
+									  		<%= current_user.first_name %>
+									    	<%= image_tag @user.image.url(:thumb).to_s %>
+									  	</div>
+									  </button>
+									  <ul class="dropdown-menu">
+									    <li class="dropdown-item"><%= link_to 'Your Listing' %></li>
+									    <li class="dropdown-item"><%= link_to 'Edit Profile', edit_user_path(current_user) %></li>
+									    <div class="dropdown-divider"></div>
+									    <li class="dropdown-item"><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
+									  </ul>
+									</div>
 							<% else %>
 								<li><%= link_to "Sign Up",   '#' %></li>
 								<li><%= link_to "Log in",   '#' %></li>
