@@ -1,7 +1,7 @@
 <h1>Create new listing</h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for [@user,@listing], html: { multiple: true } do |f| %> 
+    <%= form_for [@user,@listing], :html => { :multipart => true } do |f| %> 
     	<hr>
     	<h3>Help travelers to find the right fit</h3>
     	<p>People searching on Pairbnb can filter by listing basics to find a space that matches their needs.</p>
@@ -82,7 +82,7 @@
       <br/>
       <div>
         <%= f.label :photos, "Add photos" %>
-        <%= f.file_field :photos, multiple: true, name: "post_attachments[avatar][]" %>
+        <%= f.file_field :photos, :multiple=> true %>
       </div>
       <hr>
       <br/>
