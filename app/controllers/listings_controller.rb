@@ -13,7 +13,7 @@ class ListingsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:user_id])
+    @user = current_user
     @listing = @user.listings.build(listing_params)
     if @listing.save
       redirect_to @listing     

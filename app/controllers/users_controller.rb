@@ -1,5 +1,5 @@
 class UsersController < Clearance::UsersController
-	before_action :require_login, only: [:index, :show]
+	before_action :require_login, only: [:index, :show, :edit, :update]
 	
   def index
     @user = current_user

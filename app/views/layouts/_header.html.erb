@@ -15,15 +15,15 @@
 									  	</div>
 									  </button>
 									  <ul class="dropdown-menu">
-									    <li class="dropdown-item"><%= link_to 'Your Listing' %></li>
+									    <li class="dropdown-item"><%= link_to 'Create Listing', new_listing_path %></li>
 									    <li class="dropdown-item"><%= link_to 'Edit Profile', edit_user_path(current_user) %></li>
 									    <div class="dropdown-divider"></div>
 									    <li class="dropdown-item"><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
 									  </ul>
 									</div>
 							<% else %>
-								<li><%= link_to "Sign Up",   '#' %></li>
-								<li><%= link_to "Log in",   '#' %></li>
+								<li><%= link_to "Sign Up", sign_up_path %></li>
+								<li><%= link_to "Log in", sign_in_path %></li>
 							<% end %>
 					</ul>
 				</nav>
