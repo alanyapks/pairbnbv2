@@ -8,11 +8,14 @@
 			<% @listings.each do |listing|%>
 				<div class="listing-tab row">
 					<div class="col-md-4">
-						<div class="listing-photo">sd</div>
+						<div class="listing-photo"> </div>
 					</div>
-					<div class="col-md-8">
-						<div><%=listing.name%></div>
-						<div><%=listing.description%></div>
+					<div class="col-md-7">
+						<h4><%=listing.name%></h4>
+						<p><%=listing.description%></p>
+					</div>
+					<div class="col-md-1">
+						<%= link_to "View", listing_path(listing) %>
 					</div>
 				</div>
 			<% end %>

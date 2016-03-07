@@ -1,6 +1,6 @@
 class ListingsController < ApplicationController
 
-  before_action :require_login, only: [:index, :show, :edit, :update]
+  before_action :require_login, only: [:edit, :update]
 
   def index
     if params[:query].present?
