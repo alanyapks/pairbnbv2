@@ -1,6 +1,7 @@
 class Listing < ActiveRecord::Base
 	searchkick
-	belongs_to :user 
+	belongs_to :user
+  has_many :reservations, :dependent => :destroy 
 	mount_uploaders :photos, AvatarUploader
 
 	# Assuming country_select is used with User attribute `country_code`
