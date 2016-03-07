@@ -1,0 +1,11 @@
+<h1>Reservations#new</h1>
+				<%= form_for [@listing, @reservation] do |f| %> 
+					<div class = "field">
+						<%= f.label :check_in, 'Check in' %>
+      			<%= f.text_field :check_in, class: 'form-control' %>
+					</div>
+					<div class = "field">
+						<%= f.label :check_out, 'Check in' %>
+      			<%= f.text_field :check_out, class: 'form-control' %>
+					</div>
+				<% end %>

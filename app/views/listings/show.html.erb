@@ -15,10 +15,19 @@
 				</div>
 			</div>
 			<div class="col-md-4">
-				<div class="text-field">
-			  <%= form.label :date %>
-			  <%= form.text_field :date, type: 'date' %>
-			</div>
+				<div class="row">
+					<%= form_for @reservation do |f| %> 
+						<div class = "col-md-4" >
+							<%= f.label :check_in, 'Check in' %>
+	      			<%= f.text_field :check_in, class: 'form-control', placeholder: "mm/dd/yyyy" %>
+						</div>
+						<div class = "col-md-4">
+							<%= f.label :check_out, 'Check out' %>
+	      			<%= f.text_field :check_out, class: 'form-control', placeholder: "mm/dd/yyyy" %>
+						</div>
+						<%= f.submit "Request to Book", class:"btn btn-primary"  %>
+					<% end %>
+				</div>
 			</div>
 		</div>
 		<hr>
