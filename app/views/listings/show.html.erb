@@ -4,7 +4,7 @@
 <div class="row">
 	<div class ="container listings">
 		<div class="row">
-			<div class="col-lg-8">
+			<div class="col-md-8">
 				<div class="col-md-3">
 					<div class="host-profile-pic">Profile pic</div>
 					<div><p><%= @listing.user.email %></p></div>
@@ -13,6 +13,12 @@
 					<h4><%= @listing.name %></h4>
 					<p><%= @listing.state %>, <%= @listing.country %></p>
 				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="text-field">
+			  <%= form.label :date %>
+			  <%= form.text_field :date, type: 'date' %>
+			</div>
 			</div>
 		</div>
 		<hr>
