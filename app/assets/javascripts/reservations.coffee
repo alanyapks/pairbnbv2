@@ -4,4 +4,5 @@
 
 jQuery ->
  $('#reservation_check_in').datepicker()
+jQuery ->
  $('#reservation_check_out').datepicker()

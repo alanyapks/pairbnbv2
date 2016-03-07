@@ -16,7 +16,7 @@
 			</div>
 			<div class="col-md-4">
 				<div class="row">
-					<%= form_for @reservation do |f| %> 
+					<%= form_for [@listing, @reservation] do |f| %> 
 						<div class = "col-md-4" >
 							<%= f.label :check_in, 'Check in' %>
 	      			<%= f.text_field :check_in, class: 'form-control', placeholder: "mm/dd/yyyy" %>

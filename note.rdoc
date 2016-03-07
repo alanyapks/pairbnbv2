@@ -50,3 +50,8 @@ Use nested routes:
 
 Then in the routes file:
 Include resources :listings only: [:create]
+
+_______________________________________________
+
+Put reservation routes into listing routes
+in order to associate them together
