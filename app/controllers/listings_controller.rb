@@ -1,9 +1,13 @@
 class ListingsController < ApplicationController
+
+  before_action :require_login, only: [:edit, :update]
+
   def index
     if params[:query].present?
       @listings = Listing.search(params[:query], page:params[:page])
     else
-      @listings = Listing.all.page params[:page]      
+      # @listings = Listing.all.page params[:page]
+      @listings = current_user.listings.all          
     end
   end
 
@@ -30,9 +34,19 @@ class ListingsController < ApplicationController
   end
 
   def update
+    @listing = Listing.find(params[:id])
+    if @listing.update_attributes(listing_params)
+      flash[:success] = "Listing updated"
+      redirect_to @listing
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @listing.destroy
+    flash[:sucess]="Listing deleted"
+    redirect_to '/'
   end
 
   private

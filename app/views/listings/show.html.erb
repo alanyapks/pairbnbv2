@@ -18,9 +18,13 @@
 		<hr>
 		<div class="row">
 			<div class="col-md-8" >
-				<h4>About this listing</h4>
+				<h4>About this listing. 
+					<% if current_user.id == @listing.user.id %>
+						(<%= link_to "Edit Listing", edit_listing_path(@listing) %>) 
+					<% end %>
+				</h4>
 				<p><%= @listing.description %></p>
-				<p><%= link_to "Contact Host", users_path %></p>
+				<p><%= link_to "Contact Host", user_path %></p>
 				<hr>
 				<div class="row">
 					<h5 class="col-md-4" > The space</h5>
@@ -89,7 +93,7 @@
 				<div class="col-md-9">
 					<p>Member since <%= @listing.user.created_at %></p>
 					<p><%= @listing.user.email %></p>
-					<div class="btn btn-primary">Contact Host</div>
+					<div class="btn btn-primary"><%= link_to "Contact Host",  user_path %></div>
 				</div>
 			</div>
 		</div>
