@@ -4,14 +4,38 @@
 <div class="row">
 	<div class ="container listings">
 		<div class="row">
-			<div class="col-lg-8">
+			<div class="col-md-8">
 				<div class="col-md-3">
 					<div class="host-profile-pic">Profile pic</div>
-					<div><p><%= @listing.user.email %></p></div>
+					<div><p><%= @listing.user.first_name %></p></div>
 				</div>
 				<div class="col-md-9">
 					<h4><%= @listing.name %></h4>
 					<p><%= @listing.state %>, <%= @listing.country %></p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="row">
+					<%= form_for [@listing, @reservation] do |f| %> 
+						<div class="row">
+							<div class = "col-md-4" >
+							<%= f.label :check_in, 'Check in' %>
+	      			<%= f.text_field :check_in, class: 'form-control', placeholder: "dd/mm/yyyy" %>
+							</div>
+							<div class = "col-md-4">
+								<%= f.label :check_out, 'Check out' %>
+		      			<%= f.text_field :check_out, class: 'form-control', placeholder: "dd/mm/yyyy" %>
+							</div>
+							<div class="row-space-1 col-md-4">
+					      <%= f.label :guests_number, 'Guests' %><br/>
+					      <%= f.select :guests_number, [1,2], class: 'form-control' %>
+					    </div>
+						</div>
+						<br/>
+						<div class="row">
+							<div class="col-md-12"><%= f.submit "Request to Book", class:"btn btn-primary btn-booking"  %></div>
+						</div>
+					<% end %>
 				</div>
 			</div>
 		</div>
@@ -74,7 +98,7 @@
 				</div>
 			</div>
 			<div class="col-md-4" >
-				<div class="btn btn-primary">Save to wishlist</div>
+				<div class="btn btn-info btn-wishlist">Save to wishlist</div>
 			</div>
 		</div>
 		<hr>
