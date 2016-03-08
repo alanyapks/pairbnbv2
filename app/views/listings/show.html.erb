@@ -19,11 +19,11 @@
 					<%= form_for [@listing, @reservation] do |f| %> 
 						<div class = "col-md-4" >
 							<%= f.label :check_in, 'Check in' %>
-	      			<%= f.text_field :check_in, class: 'form-control', placeholder: "mm/dd/yyyy" %>
+	      			<%= f.text_field :check_in, class: 'form-control', placeholder: "dd/mm/yyyy" %>
 						</div>
 						<div class = "col-md-4">
 							<%= f.label :check_out, 'Check out' %>
-	      			<%= f.text_field :check_out, class: 'form-control', placeholder: "mm/dd/yyyy" %>
+	      			<%= f.text_field :check_out, class: 'form-control', placeholder: "dd/mm/yyyy" %>
 						</div>
 						<%= f.submit "Request to Book", class:"btn btn-primary"  %>
 					<% end %>

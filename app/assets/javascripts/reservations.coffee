@@ -3,6 +3,6 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 jQuery ->
- $('#reservation_check_in').datepicker()
+ $('#reservation_check_in').datepicker({ dateFormat: 'dd-mm-yy' })
 jQuery ->
- $('#reservation_check_out').datepicker()
+ $('#reservation_check_out').datepicker({ dateFormat: 'dd-mm-yy' })

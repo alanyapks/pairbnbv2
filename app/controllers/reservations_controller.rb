@@ -10,6 +10,7 @@ class ReservationsController < ApplicationController
 		@listing = Listing.find(params[:listing_id])
 		@reservation = current_user.reservations.new(reservation_params)
 		@reservation.listing_id = params[:listing_id]
+		# byebug
 		if @reservation.save
 			flash[:error] = "Reserve success"
 			redirect_to listing_path(@listing)
